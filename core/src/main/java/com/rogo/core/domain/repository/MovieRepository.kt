@@ -1,4 +1,4 @@
-package com.rogo.core.data.source.repository
+package com.rogo.core.domain.repository
 
 import com.rogo.core.data.source.NetworkBoundResource
 import com.rogo.core.data.source.Resource

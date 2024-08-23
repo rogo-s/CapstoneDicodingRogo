@@ -1,7 +1,7 @@
 package com.rogo.core.di
 
-import com.rogo.core.data.source.repository.MovieRepository
-import com.rogo.core.data.source.repository.MovieRepositoryImpl
+import com.rogo.core.domain.repository.MovieRepository
+import com.rogo.core.domain.repository.MovieRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

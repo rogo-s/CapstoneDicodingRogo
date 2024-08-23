@@ -1,7 +1,7 @@
 package com.rogo.core.domain.usecase
 
 import com.rogo.core.data.source.Resource
-import com.rogo.core.data.source.repository.MovieRepository
+import com.rogo.core.domain.repository.MovieRepository
 import com.rogo.core.domain.model.Movie
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
