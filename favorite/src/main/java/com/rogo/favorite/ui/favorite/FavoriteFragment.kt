@@ -76,6 +76,7 @@ class FavoriteFragment : Fragment() {
             if (it.isNotEmpty()){
                 binding.rvFav.visibility = View.VISIBLE
                 binding.empty.tvEmpty.visibility = View.GONE
+
             } else {
                 binding.rvFav.visibility = View.GONE
                 binding.empty.tvEmpty.visibility = View.VISIBLE
