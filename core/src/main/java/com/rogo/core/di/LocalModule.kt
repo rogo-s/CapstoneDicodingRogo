@@ -27,6 +27,7 @@ class LocalDataModule {
             "movie.db"
         ).openHelperFactory(factory)
             .fallbackToDestructiveMigration()
+            .openHelperFactory(factory)
             .build()
     }
 
