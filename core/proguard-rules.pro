@@ -102,7 +102,7 @@ public *;
 
 ##-------------------- keep class core
 
--keep class com.rogo.core.** {*;}
+-keep class com.ashoka.core.** {*;}
 
 -keepclassmembernames class com.rogo.core.data.source.remote.response.MovieResponse{
   <fields>;
