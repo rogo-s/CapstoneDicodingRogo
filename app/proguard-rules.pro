@@ -92,7 +92,7 @@
 -keep,includedescriptorclasses class net.sqlcipher.** { *; }
 -keep,includedescriptorclasses interface net.sqlcipher.** { *; }
 
--keep class com.ashoka.capstonedicoding.**{*;}
+-keep class com.rogo.dicodingcapstone.**{*;}
 
 -dontwarn org.conscrypt.**
 -dontwarn org.bouncycastle.**
