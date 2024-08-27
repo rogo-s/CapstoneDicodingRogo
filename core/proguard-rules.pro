@@ -101,7 +101,6 @@ public *;
 
 
 ##-------------------- keep class core
--keepattributes Signature, RuntimeVisibleAnnotations, RuntimeVisibleParameterAnnotations
 
 -keep class com.rogo.core.** {*;}
 

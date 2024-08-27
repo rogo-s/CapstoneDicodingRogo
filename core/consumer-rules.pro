@@ -96,6 +96,5 @@
 -dontwarn com.rogo.core.**
 -keepattributes Exceptions, Signature, InnerClasses
 
--keepattributes Signature, RuntimeVisibleAnnotations, RuntimeVisibleParameterAnnotations
--keepattributes SourceFile, LineNumberTable
+
 -dontobfuscate

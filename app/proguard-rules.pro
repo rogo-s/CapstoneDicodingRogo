@@ -97,6 +97,5 @@
 -dontwarn org.conscrypt.**
 -dontwarn org.bouncycastle.**
 -dontwarn org.openjsse.**
--keepattributes Signature, RuntimeVisibleAnnotations, RuntimeVisibleParameterAnnotations
 
 -dontwarn org.bouncycastle.jsse.BCSSLParameters
