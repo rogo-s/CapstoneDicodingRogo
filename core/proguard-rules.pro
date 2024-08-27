@@ -101,8 +101,9 @@ public *;
 
 
 ##-------------------- keep class core
+-keepattributes Signature, RuntimeVisibleAnnotations, RuntimeVisibleParameterAnnotations
 
--keep class com.ashoka.core.** {*;}
+-keep class com.rogo.core.** {*;}
 
 -keepclassmembernames class com.rogo.core.data.source.remote.response.MovieResponse{
   <fields>;
