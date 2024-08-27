@@ -19,7 +19,6 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
-
 -ignorewarnings
 -keep class * {
     public private *;
@@ -92,7 +91,7 @@
 -keep,includedescriptorclasses class net.sqlcipher.** { *; }
 -keep,includedescriptorclasses interface net.sqlcipher.** { *; }
 
--keep class com.ashoka.capstonedicoding.**{*;}
+-keep class com.rogo.dicodingcapstone.**{*;}
 
 -dontwarn org.conscrypt.**
 -dontwarn org.bouncycastle.**
