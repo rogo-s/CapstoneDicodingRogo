@@ -104,3 +104,12 @@
 -keepclassmembers class **.R$* {
    public static <fields>;
 }
+# Keep sealed classes and their subtypes
+-keep class com.rogo.dicodingcapstone.** { *; }
+-keep class kotlin.Metadata { *; }
+-keepattributes *Annotation*
+
+# Keep specific methods and fields that are necessary
+-keepclassmembers class com.rogo.dicodingcapstone.** {
+    *;
+}

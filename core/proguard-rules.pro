@@ -53,4 +53,12 @@
   <fields>;
   <methods>;
 }
+# Keep sealed classes and their subtypes
+-keep class com.rogo.core.** { *; }
+-keep class kotlin.Metadata { *; }
+-keepattributes *Annotation*
 
+# Keep specific methods and fields that are necessary
+-keepclassmembers class com.rogo.core.** {
+    *;
+}
