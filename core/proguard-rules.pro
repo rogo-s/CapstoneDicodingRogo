@@ -26,8 +26,31 @@
 -keepattributes Exceptions, Signature, InnerClasses
 
 
+-keep class com.rogo.core.data.source.remote.network.ApiResponse.** {*;}
+
 -dontobfuscate
 -keepattributes *Annotation*
 -keepclassmembers class **.R$* {
    public static <fields>;
 }
+
+
+-keepclassmembernames class com.rogo.core.data.source.remote.response.MovieResponse{
+  <fields>;
+  <methods>;
+}
+
+-keepclassmembernames class com.rogo.core.data.source.remote.response.Dates{
+  <fields>;
+  <methods>;
+}
+-keepclassmembernames class com.rogo.core.data.source.remote.response.ResultsItem{
+  <fields>;
+  <methods>;
+}
+
+-keepclassmembernames class com.rogo.core.data.source.remote.network.ApiResponse{
+  <fields>;
+  <methods>;
+}
+
