@@ -46,7 +46,6 @@ jobs:
   build:
     docker:
       - image: cimg/android:2024.01-ndk
-        resource_class: large  # Menggunakan resource class lebih besar
 
     environment:
       _JAVA_OPTIONS: "-Xmx4g -XX:+UseParallelGC"  # Menambah heap size JVM
