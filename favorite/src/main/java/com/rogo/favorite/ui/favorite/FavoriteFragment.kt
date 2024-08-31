@@ -2,17 +2,19 @@ package com.rogo.favorite.ui.favorite
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.rogo.core.ui.MovieAdapter
+import com.rogo.core.ui.FavoriteAdapter
 import com.rogo.dicodingcapstone.di.FavoriteModule
 import com.rogo.dicodingcapstone.views.detail.DetailFragment
 import com.rogo.favorite.R
@@ -20,6 +22,7 @@ import com.rogo.favorite.databinding.FragmentFavoriteBinding
 import com.rogo.favorite.di.DaggerFavoriteComponent
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
@@ -33,7 +36,7 @@ class FavoriteFragment : Fragment() {
     }
     private var _binding: FragmentFavoriteBinding? = null
     private val binding get() = _binding!!
-    private lateinit var movieAdapter: MovieAdapter
+    private lateinit var favoriteAdapter: FavoriteAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,7 +62,7 @@ class FavoriteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         back()
-        movieAdapter = MovieAdapter {
+        favoriteAdapter = FavoriteAdapter {
             findNavController().navigate(
                 com.rogo.dicodingcapstone.R.id.action_favoriteFragment_to_detailFragment,
                 Bundle().apply {
@@ -67,12 +70,12 @@ class FavoriteFragment : Fragment() {
                 })
         }
         binding.rvFav.apply {
-            adapter = movieAdapter
+            adapter = favoriteAdapter
             layoutManager = GridLayoutManager(requireContext(), 3)
             setHasFixedSize(true)
         }
         viewModel.getFavorite.observe(viewLifecycleOwner) {
-            movieAdapter.differ.submitList(it)
+            favoriteAdapter.differ.submitList(it)
             if (it.isNotEmpty()){
                 binding.rvFav.visibility = View.VISIBLE
                 binding.empty.tvEmpty.visibility = View.GONE
